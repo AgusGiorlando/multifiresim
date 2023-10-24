@@ -1,6 +1,5 @@
 from pydantic import BaseModel
 
-
 class Simulation(BaseModel):
     result_filename: str
     model: str

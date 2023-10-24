@@ -114,7 +114,7 @@ int main ( int argc, char **argv )
     if ((ficherocell=fopen(argv[4],"r+t"))==NULL)
     {
         //Error al abrir el archivo de celdas
-        printf("No se puede abrir el archivo de celdas: %s\n", argv[2]);
+        printf("No se puede abrir el archivo de celdas: %s\n", argv[4]);
         exit(1);
     }
     ///Leer las dimensiones (X e Y) y el tamaño de las celdas (CellWd y CellHt)

@@ -1,21 +1,23 @@
-from fastapi import FastAPI, HTTPException
+import logging
+import os
+from pydantic import BaseModel
+from fastapi import FastAPI
 from fastapi.responses import FileResponse
-from .simulation_service import run_simulation
-from .simulation import Simulation
-from typing import Optional
+from .simulation.simulation import Simulation
+from .simulation.simulation_service import run_simulation
 
 app = FastAPI()
 
-
 @app.get("/")
 def index():
-    return {"message": "Hola"}
-
+    version = "0734"
+    return {"message": "Firesim " + version}
 
 @app.post("/simulate")
 async def simulate(simulation: Simulation):
     try:
-        result_filepath = await run_simulation(simulation)
+        result_filename = await run_simulation(simulation)
+        result_filepath = os.path.join("/api/results", result_filename)
         return FileResponse(result_filepath)
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        return {"error": str(e)}, 500
