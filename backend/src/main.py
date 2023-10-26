@@ -1,23 +1,25 @@
+import httpx
 from fastapi import FastAPI
-from pydantic import BaseModel
-from typing import Optional
+from simulation.simulation import Simulation
 
-app =  FastAPI()
+app = FastAPI()
 
-class Libro(BaseModel):
-    titulo: str
-    autor: str
-    paginas: int
-    editorial: Optional[str]
 
 @app.get("/")
 def index():
-    return {"message" : "Hola"}
+    return {"message": "Backend"}
 
-@app.get("/libros/{id}")
-def mostrar_libros(id: int):
-    return {"data": id}
 
-@app.post("/libros")
-def insertar_libro(libro: Libro):
-    return {"message" : f"libro {libro.titulo} ha sido insertado"}
+@app.post("/simulate")
+async def simulate(simulation: Simulation):
+    try:
+        url = "http://localhost:8081/simulate"
+        data = simulation.model_dump()
+        
+        # Encabezados si son necesarios
+        headers = {"Content-Type": "application/json"}
+        async with httpx.AsyncClient() as client:
+            response = await client.post(url, json=data, headers=headers)
+        return {'response' : response.content}
+    except Exception as e:
+        return {"Backend error": str(e)}, 500

@@ -3,3 +3,4 @@ pydantic>=1.8.0,<2.0.0
 uvicorn>=0.15.0,<0.16.0
 aiofiles==0.4.0
 wtforms==2.2.1
+httpx==0.25.0
