@@ -5,6 +5,7 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from .simulation.simulation import Simulation
 from .simulation.simulation_service import run_simulation
+import traceback
 
 app = FastAPI()
 
@@ -20,4 +21,6 @@ async def simulate(simulation: Simulation):
         result_filepath = os.path.join("/api/results", result_filename)
         return FileResponse(result_filepath)
     except Exception as e:
-        return {"error": str(e)}, 500
+        just_the_string = traceback.format_exc()
+        return {"Firesim error": str(e),
+                'traceback' : just_the_string}, 500

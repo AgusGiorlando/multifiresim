@@ -1,0 +1,19 @@
+version: '3.2'
+
+services:
+  backend:
+    image: tiangolo/uvicorn-gunicorn-fastapi:python3.7
+    volumes:
+      - "/home/agus/Documentos/kube/code/backend/src:src"
+    ports:
+      - 8080:80
+    restart: always
+
+  firesim:
+    image: python:3.9
+    volumes:
+      - "/home/agus/Documentos/kube/code/firesim/api:api"
+      - "/home/agus/Documentos/kube/code/firesim/src:src"
+    ports:
+      - 8180:80
+    restart: always
