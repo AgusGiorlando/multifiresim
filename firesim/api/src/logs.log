@@ -1,0 +1,60 @@
+2024-01-25 07:43:51,735 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/testpa
+2024-01-25 07:43:51,736 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-01-25 07:43:51,736 - simulation.simulation_service - DEBUG - simulation/_fotog802.map
+2024-01-25 07:43:51,842 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-01-25 07:43:51,842 - simulation.simulation_service - DEBUG - Archivo result: ../api/results/testpa
+2024-01-25 07:45:34,596 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/testpa
+2024-01-25 07:45:34,596 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-01-25 07:45:34,597 - simulation.simulation_service - DEBUG - simulation/_fotog802.map
+2024-01-25 07:45:34,703 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-01-25 07:45:34,703 - simulation.simulation_service - DEBUG - Archivo result: ../api/results/testpa
+2024-01-25 07:47:24,264 - simulation.simulation_service - DEBUG - Ruta del result: results/testpa
+2024-01-25 07:47:24,264 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-01-25 07:47:24,264 - simulation.simulation_service - DEBUG - simulation/_fotog802.map
+2024-01-25 07:47:24,360 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-01-25 07:47:24,360 - simulation.simulation_service - DEBUG - Archivo result: results/testpa
+2024-01-25 07:49:08,647 - simulation.simulation_service - DEBUG - Ruta del result: results/testpa
+2024-01-25 07:49:08,647 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-01-25 07:49:08,647 - simulation.simulation_service - DEBUG - simulation/_fotog802.map
+2024-01-25 07:49:08,748 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-01-25 07:49:08,748 - simulation.simulation_service - DEBUG - Archivo result: results/testpa
+2024-01-25 07:49:59,478 - simulation.simulation_service - DEBUG - Ruta del result: testpa
+2024-01-25 07:49:59,478 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-01-25 07:49:59,478 - simulation.simulation_service - DEBUG - simulation/_fotog802.map
+2024-01-25 07:49:59,576 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-01-25 07:49:59,576 - simulation.simulation_service - DEBUG - Archivo result: testpa
+2024-01-25 07:51:47,922 - simulation.simulation_service - DEBUG - Ruta del result: results/testpa
+2024-01-25 07:51:47,923 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-01-25 07:51:47,923 - simulation.simulation_service - DEBUG - simulation/_fotog802.map
+2024-01-25 07:51:48,023 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-01-25 07:51:48,023 - simulation.simulation_service - DEBUG - Archivo result: results/testpa
+2024-01-25 07:52:51,732 - simulation.simulation_service - DEBUG - Ruta del result: ../../results/testpa
+2024-01-25 07:52:51,733 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-01-25 07:52:51,733 - simulation.simulation_service - DEBUG - simulation/_fotog802.map
+2024-01-25 07:52:51,835 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-01-25 07:52:51,835 - simulation.simulation_service - DEBUG - Archivo result: ../../results/testpa
+2024-01-25 07:53:36,377 - simulation.simulation_service - DEBUG - Ruta del result: ../results/testpa
+2024-01-25 07:53:36,377 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-01-25 07:53:36,377 - simulation.simulation_service - DEBUG - simulation/_fotog802.map
+2024-01-25 07:53:36,498 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-01-25 07:53:36,498 - simulation.simulation_service - DEBUG - Archivo result: ../results/testpa
+2024-01-25 07:54:04,837 - simulation.simulation_service - DEBUG - Ruta del result: ../results/anda_bien
+2024-01-25 07:54:04,837 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-01-25 07:54:04,837 - simulation.simulation_service - DEBUG - simulation/_fotog802.map
+2024-01-25 07:54:04,943 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-01-25 07:54:04,943 - simulation.simulation_service - DEBUG - Archivo result: ../results/anda_bien
+2024-01-25 07:55:41,641 - simulation.simulation_service - DEBUG - Ruta del result: ../results/anda_bien
+2024-01-25 07:55:41,641 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-01-25 07:55:41,641 - simulation.simulation_service - DEBUG - simulation/_fotog802.map
+2024-01-25 07:55:41,745 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-01-25 07:55:41,745 - simulation.simulation_service - DEBUG - Archivo result: ../results/anda_bien
+2024-01-25 07:55:54,456 - simulation.simulation_service - DEBUG - Ruta del result: ../results/anda_bien
+2024-01-25 07:55:54,456 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-01-25 07:55:54,457 - simulation.simulation_service - DEBUG - simulation/_fotog802.map
+2024-01-25 07:55:54,563 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-01-25 07:55:54,563 - simulation.simulation_service - DEBUG - Archivo result: ../results/anda_bien
+2024-01-25 08:01:03,969 - simulation.simulation_service - DEBUG - Ruta del result: ../results/anda_bien
+2024-01-25 08:01:03,969 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-01-25 08:01:03,969 - simulation.simulation_service - DEBUG - simulation/_fotog802.map
+2024-01-25 08:01:04,086 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-01-25 08:01:04,086 - simulation.simulation_service - DEBUG - Archivo result: ../results/anda_bien

@@ -1,6 +1,4 @@
-fastapi>=0.68.0,<0.69.0
-pydantic>=1.8.0,<2.0.0
-uvicorn>=0.15.0,<0.16.0
 aiofiles==0.4.0
 wtforms==2.2.1
 httpx==0.24.1
+redis==5.0.1

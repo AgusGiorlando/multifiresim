@@ -18,11 +18,12 @@ async def run_simulation(simulation: Simulation):
         logger.addHandler(file_handler)
         
         # Ruta del resultado
-        result_filepath = os.path.join("../api/results", simulation.result_filename)
+        result_filepath = os.path.join("../results", simulation.result_filename)
         logger.debug(f"Ruta del result: {result_filepath}")
         
         # Inicia la simulación de manera asincrónica
         logger.debug("Iniciando simulador")
+        logger.debug(simulation.file_ign)
         process = await asyncio.create_subprocess_exec(
             "../../src/fireSim", result_filepath, simulation.model, simulation.slope, simulation.file_ign, simulation.start_time, simulation.end_time,
             stdout=PIPE, stderr=PIPE, cwd="../src"
@@ -35,11 +36,11 @@ async def run_simulation(simulation: Simulation):
         # Verifica si hubo errores en la ejecución del simulador
         if process.returncode != 0:
             decoded_stdout = stdout.decode()
-            logger.debug(decoded_stdout.strip())
+            logger.error(decoded_stdout.strip())
             raise CalledProcessError(process.returncode, process, decoded_stdout.strip())
         logger.debug(f"Archivo result: {result_filepath}")
 
-        return simulation.result_filename
+        return result_filepath
     except CalledProcessError as e:
         raise Exception(e.output.strip())
     except Exception as e:

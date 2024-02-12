@@ -1,19 +1,29 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: batch/v1
+kind: Job
 metadata:
-  name: firesim
+  name: firesim-job
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: firesim
   template:
     metadata:
-      labels:
-        app: firesim
+      name: firesim-job
     spec:
       containers:
         - name: firesim
           image: agusgiorlando/multifiresim-firesim:latest
-          ports:
-            - containerPort: 80
+      restartPolicy: OnFailure
+
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: firesim
+#   template:
+#     metadata:
+#       labels:
+#         app: firesim
+#     spec:
+#       containers:
+#         - name: firesim
+#           image: agusgiorlando/multifiresim-firesim:latest
+#           ports:
+#             - containerPort: 80

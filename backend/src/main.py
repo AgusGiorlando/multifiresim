@@ -4,6 +4,7 @@ from fastapi.responses import FileResponse
 from simulation.simulation import Simulation
 import json
 import traceback
+import redis
 
 
 app = FastAPI()
@@ -22,7 +23,7 @@ async def simulate(simulation: Simulation):
     
         response = httpx.post(url, json=data)
         return {'response' : FileResponse(response.content, filename=simulation.result_filename)}
-        # return {'response' : type(response)}
+                
     except Exception as e:
         traceback_str = traceback.format_exc()
         return {"Backend error": str(e),

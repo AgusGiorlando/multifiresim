@@ -5,8 +5,8 @@ COPY ./api /api
 
 COPY requirements.txt /
 RUN pip install --no-cache-dir --upgrade -r /requirements.txt
-RUN mkdir -p /api/results
+# RUN mkdir -p /api/results
 
-WORKDIR /api
+WORKDIR /api/src
 
-CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--reload", "--port", "80"]
+# CMD ["uvicorn", "src.main:app", "--host", "0.0.0.0", "--reload", "--port", "80"]
