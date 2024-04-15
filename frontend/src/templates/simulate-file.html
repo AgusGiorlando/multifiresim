@@ -1,0 +1,35 @@
+{% extends "layout.html" %} {% block content %}
+<section class="simulate-file">
+  <h1>Simular</h1>
+  <div class="container">
+    {{file_id}}
+
+    <form action"/simulate-file/{{file_id}}" method="POST" class="form" enctype="multipart/form-data">
+          
+      <label for="model" class="form__label">Model:</label><br>
+      <input type="text" id="email" name="model" class="form__input"><br>
+
+      <label for="slope" class="form__label">slope:</label><br>
+      <input type="text" id="email" name="slope" class="form__input"><br>
+
+      <label for="start_time" class="form__label">start_time:</label><br>
+      <input type="text" id="email" name="start_time" class="form__input"><br>
+
+      <label for="end_time" class="form__label">end_time:</label><br>
+      <input type="text" id="email" name="end_time" class="form__input"><br>
+
+      <input type="submit" value="Simular" class="btn btn--success">
+    </form>
+
+  </div>
+
+  {% if simulation %}
+  <h2>Datos del formulario:</h2>
+  <p><strong>Nombre de archivo:</strong> {{ simulation.file_id }}</p>
+  <p><strong>Modelo:</strong> {{ simulation.model }}</p>
+  <p><strong>Slope:</strong> {{ simulation.slope }}</p>
+  <p><strong>Inicio:</strong> {{ simulation.start_time }}</p>
+  <p><strong>Fin:</strong> {{ simulation.end_time }}</p>
+  {% endif %}
+</section>
+{% endblock %}

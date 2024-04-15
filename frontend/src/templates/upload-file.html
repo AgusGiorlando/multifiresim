@@ -1,0 +1,20 @@
+{% extends "layout.html" %} {% block content %}
+<section class="upload-file">
+  {% if alert %} {% include 'alert.html' %} {% endif %}
+  <h1>Subir Archivo</h1>
+  <form
+    action="/files/upload"
+    method="post"
+    class="form"
+    enctype="multipart/form-data"
+  >
+    <label for="name" class="form__label">Nombre del archivo:</label><br />
+    <input type="text" id="name" name="name" class="form__input" /><br />
+
+    <label for="file" class="form__label">Archivo:</label><br />
+    <input type="file" id="file" name="file" class="form__input" /><br />
+
+    <input type="submit" value="Subir" class="btn btn--primary" />
+  </form>
+</section>
+{% endblock %}

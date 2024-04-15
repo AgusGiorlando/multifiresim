@@ -4,7 +4,7 @@ import os
 from subprocess import Popen, PIPE, CalledProcessError
 from .simulation import Simulation
 
-async def run_simulation(simulation: Simulation):
+async def run_simulation(simulation: Simulation, file):
     try:      
         # Configuracion de logging
         logging.basicConfig(level=logging.DEBUG)       
@@ -17,14 +17,26 @@ async def run_simulation(simulation: Simulation):
         file_handler.setFormatter(formatter)
         logger.addHandler(file_handler)
         
+        # Mapa inicial
+        simulation_filepath = f"../api/simulations/{file['_id']}.map"
+        with open(simulation_filepath, "w") as simulation_file:
+            simulation_file.write(file.get("content"))
+        logger.debug(f"Ruta de mapa inicial: {simulation_filepath}")   
+        
         # Ruta del resultado
-        result_filepath = os.path.join("../api/results", simulation.result_filename)
+        result_filepath = os.path.join("../api/results", str(file['_id']))
         logger.debug(f"Ruta del result: {result_filepath}")
         
         # Inicia la simulación de manera asincrónica
         logger.debug("Iniciando simulador")
         process = await asyncio.create_subprocess_exec(
-            "../../src/fireSim", result_filepath, simulation.model, simulation.slope, simulation.file_ign, simulation.start_time, simulation.end_time,
+            "../../src/fireSim",
+            result_filepath,
+            simulation.model,
+            str(simulation.slope),
+            simulation_filepath,
+            str(simulation.start_time),
+            str(simulation.end_time),
             stdout=PIPE, stderr=PIPE, cwd="../src"
         )
 
@@ -39,7 +51,7 @@ async def run_simulation(simulation: Simulation):
             raise CalledProcessError(process.returncode, process, decoded_stdout.strip())
         logger.debug(f"Archivo result: {result_filepath}")
 
-        return simulation.result_filename
+        return str(file['_id'])
     except CalledProcessError as e:
         raise Exception(e.output.strip())
     except Exception as e:

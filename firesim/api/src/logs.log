@@ -1,0 +1,112 @@
+2024-03-16 21:55:37,251 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: testing.map
+2024-03-16 21:56:15,683 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: 65f50b055122e193fec916ad.map
+2024-03-16 22:09:10,977 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: 65f50b055122e193fec916ad.map
+2024-03-16 22:49:52,620 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../65f50b055122e193fec916ad.map
+2024-03-16 22:51:15,467 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f50b055122e193fec916ad.map
+2024-03-16 22:51:15,467 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f50b055122e193fec916ad.map
+2024-03-16 22:53:45,806 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f50b055122e193fec916ad.map
+2024-03-16 22:54:39,155 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f50b055122e193fec916ad.map
+2024-03-16 22:55:31,170 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f50b055122e193fec916ad.map
+2024-03-16 22:55:31,170 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f50b055122e193fec916ad
+2024-03-16 22:55:31,170 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 22:57:58,937 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 22:57:58,937 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 22:57:58,937 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 22:57:58,937 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 22:57:58,938 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 22:57:58,938 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:00:09,907 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:00:09,907 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:00:09,907 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:03:09,451 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:03:09,453 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:03:09,454 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:03:22,484 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:03:22,484 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:03:22,485 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:03:22,488 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-03-16 23:03:22,489 - simulation.simulation_service - DEBUG - ******************************************************************************
+  FORMATO DE LA LLAMADA*
+
+  fireSim <file-salida> <#modelo> <slope> <file-ign> <time-inicio> <time-end>
+******************************************************************************
+2024-03-16 23:03:45,981 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:03:45,982 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:03:45,985 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:03:45,995 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-03-16 23:03:45,996 - simulation.simulation_service - DEBUG - ******************************************************************************
+  FORMATO DE LA LLAMADA*
+
+  fireSim <file-salida> <#modelo> <slope> <file-ign> <time-inicio> <time-end>
+******************************************************************************
+2024-03-16 23:03:57,118 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:03:57,119 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:03:57,124 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:03:57,142 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-03-16 23:03:57,142 - simulation.simulation_service - DEBUG - ******************************************************************************
+  FORMATO DE LA LLAMADA*
+
+  fireSim <file-salida> <#modelo> <slope> <file-ign> <time-inicio> <time-end>
+******************************************************************************
+2024-03-16 23:04:11,430 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:04:11,431 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:04:11,433 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:05:25,328 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:05:25,328 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:05:25,329 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:05:41,544 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:05:41,544 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:05:41,544 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:05:41,548 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-03-16 23:05:41,549 - simulation.simulation_service - DEBUG - ******************************************************************************
+  FORMATO DE LA LLAMADA*
+
+  fireSim <file-salida> <#modelo> <slope> <file-ign> <time-inicio> <time-end>
+******************************************************************************
+2024-03-16 23:05:53,339 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:05:53,340 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:05:53,341 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:05:53,346 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-03-16 23:05:53,348 - simulation.simulation_service - DEBUG - ******************************************************************************
+  FORMATO DE LA LLAMADA*
+
+  fireSim <file-salida> <#modelo> <slope> <file-ign> <time-inicio> <time-end>
+******************************************************************************
+2024-03-16 23:06:00,906 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:06:00,906 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:06:00,906 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:06:52,941 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:06:52,941 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:06:52,941 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:06:53,050 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-03-16 23:06:53,050 - simulation.simulation_service - DEBUG - Archivo result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:08:43,098 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:08:43,098 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:08:43,098 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:08:43,254 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-03-16 23:08:43,255 - simulation.simulation_service - DEBUG - Archivo result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:10:49,869 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:10:49,870 - simulation.simulation_service - DEBUG - Ruta del result: ../results/65f64deb6e3a1a35c750be14
+2024-03-16 23:10:49,871 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:10:50,031 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-03-16 23:10:50,031 - simulation.simulation_service - DEBUG - Archivo result: ../results/65f64deb6e3a1a35c750be14
+2024-03-16 23:11:31,650 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:11:31,650 - simulation.simulation_service - DEBUG - Ruta del result: ../results/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:11:31,650 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:11:31,752 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-03-16 23:11:31,753 - simulation.simulation_service - DEBUG - Archivo result: ../results/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:12:47,963 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:12:47,964 - simulation.simulation_service - DEBUG - Ruta del result: ../results/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:12:47,964 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:12:48,068 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-03-16 23:12:48,068 - simulation.simulation_service - DEBUG - Archivo result: ../results/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:14:18,211 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:14:18,212 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:14:18,212 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:14:18,347 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-03-16 23:14:18,348 - simulation.simulation_service - DEBUG - Archivo result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:14:34,305 - simulation.simulation_service - DEBUG - Ruta de mapa inicial: ../simulations/65f64deb6e3a1a35c750be14.map
+2024-03-16 23:14:34,305 - simulation.simulation_service - DEBUG - Ruta del result: ../api/results/65f64deb6e3a1a35c750be14
+2024-03-16 23:14:34,305 - simulation.simulation_service - DEBUG - Iniciando simulador
+2024-03-16 23:14:34,399 - simulation.simulation_service - DEBUG - Simulacion terminada
+2024-03-16 23:14:34,400 - simulation.simulation_service - DEBUG - Archivo result: ../api/results/65f64deb6e3a1a35c750be14

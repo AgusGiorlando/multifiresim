@@ -1,0 +1,167 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+/* Estilos para el encabezado */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header__title {
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  padding-top: 5px;
+}
+
+.header__nav-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.header__nav-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilos para la sección del héroe */
+.hero {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hero__title {
+  margin-top: 0;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+/* Estilos para la sección de características */
+.features {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.features__title {
+  margin-top: 0;
+}
+
+.feature {
+  margin-bottom: 30px;
+}
+
+/* Estilos para el pie de página */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer__copyright {
+  margin: 0;
+}
+
+/* Estilos para el formulario */
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+}
+
+.form__label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form__input,
+.form__textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn--primary {
+  background-color: #002fff;
+}
+
+.btn--danger {
+  background-color: #cc1919;
+}
+
+.btn--success {
+  background-color: #005f05;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+.alert {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #3682f4;
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.alert__closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.alert__closebtn:hover {
+  color: black;
+}

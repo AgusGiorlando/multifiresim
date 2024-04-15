@@ -5,3 +5,4 @@ backend/src/simulation/__pycache__/__init__.cpython-310.pyc
 backend/src/simulation/__pycache__/simulation.cpython-310.pyc
 backend/src/__pycache__/main.cpython-310.pyc
 backend/src/__pycache__/main.cpython-310.pyc
+others/*

@@ -1,0 +1,10 @@
+{% extends "layout.html" %} {% block content %} {% if alert %} {% include
+'alert.html' %} {% endif %}
+<section id="hero" class="hero">
+  <img src="/view-map/{{file_filename}}" alt="Heatmap" />
+  {% for result in results %}
+  <hr />
+  <img src="/view-map/{{result}}" alt="Heatmap" />
+  {% endfor %}
+</section>
+{% endblock %}

@@ -1,9 +1,12 @@
 from pydantic import BaseModel
 
 class Simulation(BaseModel):
-    result_filename: str
+    file_id:str
     model: str
-    slope: str
-    file_ign: str
-    start_time: str
-    end_time: str
+    slope: float
+    start_time: float
+    end_time: float
+    
+    class Config:
+        # validate_assignment = True
+        arbitrary_types_allowed=True
