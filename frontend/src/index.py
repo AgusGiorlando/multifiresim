@@ -13,7 +13,7 @@ BACKEND_URL = "http://backend/"
 
 @app.route("/")
 def index():
-    return render_template("index.html", ping_resp="Probar ping a base de datos")
+    return render_template("index.html")
 
 
 @app.route("/ping")
@@ -57,30 +57,23 @@ def files():
 @app.route("/view/<file_id>")
 def view_file(file_id):
     try:
-        # Genera y guarda la imagen del mapa inicial
-        map_content = findFileContentById(file_id)
-        if map_content is None:
-            return render_template("index.html", ping_resp="No se encontró el archivo")
-
-        file_filename = file_id + "-map.png"
-        saveFileImage(map_content, file_filename)
-
         # Genera y guarda imagenes de simulaciones
         results = findSimulationsByFile(file_id)
 
         return render_template(
-            "view-file.html", file_filename=file_filename, results=results
+            "view-file.html", filename=file_id, results=results
         )
     except AttributeError as e:
         raise e  # Levanta la excepción original
     except Exception as e:
         traceback_str = traceback.format_exc()
-        return render_template("index.html", ping_resp=str(traceback_str))
+        return render_template("index.html", alert=str(traceback_str))
 
 
 @app.route("/view-map/<filename>")
 def view_map(filename):
-    return send_file(filename, mimetype="image/png")
+    dir = "/app/images/"
+    return send_file(dir + filename + '.png', mimetype="image/png")
 
 
 @app.route("/files/upload", methods=["GET", "POST"])
@@ -103,7 +96,7 @@ def upload_file():
                     json=file.dict(),
                     headers={"Content-Type": "application/json"},
                 )
-                return render_template("upload-file.html", alert=str(response.text))
+                return files()
             else:
                 return "No se proporcionó ningún archivo"
         return render_template("upload-file.html")
@@ -138,7 +131,7 @@ def simulate_file(file_id):
                 json=simulation_data,
                 headers={"Content-Type": "application/json"},
             )
-            return render_template("files.html", alert=str(response.text))
+            return files()
         except ValidationError as e:
             render_template("files.html", alert=str(e))
         except Exception as e:

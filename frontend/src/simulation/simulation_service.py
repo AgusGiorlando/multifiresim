@@ -16,8 +16,8 @@ def findFileContentById(file_id):
     response = httpx.get(backend_url)
     if response.status_code == 200:
         try:
-            content = response.json().get("content")
-            return content
+            filepath = response.json().get("filepath")
+            return filepath
         except json.decoder.JSONDecodeError:
             return "La respuesta no es un JSON válido"
     else:
@@ -57,9 +57,7 @@ def findSimulationsByFile(file_id):
         response = httpx.get(backend_url)
         if response.status_code == 200:
             for simulation in response.json():
-                result_filename = simulation.get("_id") + "-result.png"
-                saveFileImage(simulation.get("results"), result_filename)
-                results.append(result_filename)
+                results.append(simulation)
             return results
         else:
             # Manejar el caso donde la respuesta no es exitosa

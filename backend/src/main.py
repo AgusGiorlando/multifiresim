@@ -1,6 +1,6 @@
 import httpx
 from fastapi import FastAPI, HTTPException, Request
-from fastapi.responses import FileResponse
+from models.simulation_service import saveFileImage
 from models.simulation import Simulation
 from models.file import File
 from models.result import Result
@@ -20,16 +20,22 @@ db = client["simulation_db"]
 
 @app.get("/")
 def index():
-    return {"message": "Backend"}
+    return {"message": "Backend local"}
 
 @app.post('/files/upload')
 async def upload_file(file: File):
     try:      
         collection = db["files"]
         data = file.dict()
+        
+        # Guarda en Base de datos
         result = await collection.insert_one(data)
         if result.inserted_id:
-            return {"message": "Archivo subido correctamente", "file_id": str(result.inserted_id)}
+            # Guarda la imagen
+            image_filepath = saveFileImage(data['content'], str(result.inserted_id))
+            await collection.update_one({"_id": result.inserted_id}, {"$set": {"filepath": image_filepath}})
+            data['filepath'] = image_filepath
+            return {"message": "Archivo subido correctamente", "file_id": str(result.inserted_id), "image_filepath" : image_filepath}
         else:
             traceback_str = traceback.format_exc()
             raise HTTPException(status_code=500, detail=traceback_str)    
@@ -48,7 +54,7 @@ async def get_file(file_id):
             file_data = {
                 "id": str(file["_id"]),
                 "name": file.get("name"),
-                "content": file.get("content")
+                "filepath": file.get("filepath")
             }
             return file_data
         else:
@@ -103,6 +109,9 @@ async def simulate(simulation: Simulation):
         if not res.inserted_id :
             raise HTTPException(status_code=500, detail="Failed to create result")
         
+        # Guarda la imagen
+        image_filepath = saveFileImage(result_data['content'], str(res.inserted_id))
+        await collection.update_one({"_id": res.inserted_id}, {"$set": {"filepath": image_filepath}})
         
         return {'result' : str(res.inserted_id)}
         
@@ -134,5 +143,5 @@ async def get_simulations(file_id):
         results = await cursor.to_list(length=None)
         for result in results:
             #result["_id"] = str(result["_id"])
-            simulation["results"] = result['content']
+            simulation["results"] = str(result["_id"])
     return  simulations

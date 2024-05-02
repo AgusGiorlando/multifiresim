@@ -13,15 +13,36 @@ body {
 
 /* Estilos para el encabezado */
 .header {
-  background-color: #333;
+  background-color: #0a7b50;
   color: #fff;
-  padding: 20px 0;
+  padding: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  padding: 10px;
+  color: #333;
+  background-color: #fff;
 }
 
 .header__title {
   margin: 0;
   padding: 0;
+  font-size: larger;
+}
+
+
+nav.header__nav {
+  display: flex;
+  flex-direction: row;
+  padding-left: 40px;
 }
 
 .header__nav-list {
@@ -39,6 +60,10 @@ body {
 .header__nav-link {
   color: #fff;
   text-decoration: none;
+}
+
+.header__logo {
+  height: 65px;
 }
 
 /* Estilos para la sección del héroe */
