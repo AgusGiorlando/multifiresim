@@ -134,9 +134,6 @@ async def get_simulations(file_id):
     cursor = collection.find({"file_id": file_id})
     simulations = await cursor.to_list(length=None)
     
-    if not simulations:
-        raise HTTPException(status_code=404, detail="No se encontraron simulaciones con el file_id dado")
-    
     for simulation in simulations:
         simulation["_id"] = str(simulation["_id"])
         cursor = db["results"].find({"simulation_id": simulation["_id"]})
