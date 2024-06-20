@@ -1,7 +1,8 @@
 {% extends "layout.html" %} {% block content %}
 <section class="files">
-  <h1>Simulaciones</h1>
-  <a href="{{ url_for('upload_file') }}" class="btn btn--primary">Subir archivo</a>
+  <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simulaciones</h2>
+  
+  <a href="{{ url_for('upload_file') }}" class="btn btn--primary gap-x-8 gap-y-16">Subir archivo</a>
   <br /><br />
   <table>
     <tr>

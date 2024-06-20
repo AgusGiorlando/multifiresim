@@ -1,14 +1,40 @@
 {% extends "layout.html" %} {% block content %}
 <section id="hero" class="hero">
-  <img src="{{ url_for('view_map', filename=filename) }}" alt="Heatmap" />
-
   {% for result in results %} {% if result %}
-  <hr />
-  Model: {{result.model}}<br>
-  Slope: {{result.slope}}<br>
-  Inicio: {{result.start_time}}<br>
-  Fin: {{result.end_time}}<br>
-  <img src="{{ url_for('view_map', filename=result.results) }}" alt="Heatmap" />
+  <div class="flex flex-col h-full w-full">
+    <div class="flex flex-row gap-8 p-6">
+      <div class="flex-1 bg-muted rounded-lg overflow-hidden">
+        <h3 class="text-lg font-medium">Mapa inicial</h3>
+        <img src="{{ url_for('view_map', filename=filename) }}" alt="Input Map" width="600" height="400"
+          class="object-cover w-full h-full" style="object-fit: cover;" />
+      </div>
+      <div class="flex-1 bg-muted rounded-lg overflow-hidden">
+        <h3 class="text-lg font-medium">Mapa Final</h3>
+        <img src="{{ url_for('view_map', filename=result.results) }}" alt="Output Map" width="600" height="400"
+          class="object-cover w-full h-full" style="object-fit: cover;" />
+      </div>
+    </div>
+    <div class="flex-1 bg-muted rounded-t-2xl p-8">
+      <div class="grid grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div class="grid gap-2">
+          <div class="text-lg font-medium">Modelo</div>
+          <div class="text-muted-foreground">{{result.model}}</div>
+        </div>
+        <div class="grid gap-2">
+          <div class="text-lg font-medium">Pendiente</div>
+          <div class="text-muted-foreground">{{result.slope}}</div>
+        </div>
+        <div class="grid gap-2">
+          <div class="text-lg font-medium">Tiempo inicial</div>
+          <div class="text-muted-foreground">{{result.start_time}}</div>
+        </div>
+        <div class="grid gap-2">
+          <div class="text-lg font-medium">Tiempo final</div>
+          <div class="text-muted-foreground">{{result.end_time}}</div>
+        </div>
+      </div>
+    </div>
   {% endif %} {% endfor %}
+
 </section>
 {% endblock %}

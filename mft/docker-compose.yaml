@@ -27,6 +27,9 @@ services:
         - backend
   firesim:
     image: agusgiorlando/multifiresim-firesim:latest
+    volumes:
+      - ../firesim/src/:/src
+      - ../firesim/api/:/api
     ports:
       - "3000:80"
 volumes:

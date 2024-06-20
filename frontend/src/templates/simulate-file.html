@@ -1,24 +1,45 @@
 {% extends "layout.html" %} {% block content %}
 <section class="simulate-file">
-  <h1>Simular</h1>
-  <div class="container">
+  <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Simular</h2>
+
+
+  <div class="border-b border-gray-900/10 pb-12">
     <form action"/simulate-file/{{file_id}}" method="POST" class="form" enctype="multipart/form-data">
-          
-      <label for="model" class="form__label">Model:</label><br>
-      <input type="text" id="email" name="model" class="form__input"><br>
 
-      <label for="slope" class="form__label">slope:</label><br>
-      <input type="text" id="email" name="slope" class="form__input"><br>
-
-      <label for="start_time" class="form__label">start_time:</label><br>
-      <input type="text" id="email" name="start_time" class="form__input"><br>
-
-      <label for="end_time" class="form__label">end_time:</label><br>
-      <input type="text" id="email" name="end_time" class="form__input"><br>
-
-      <input type="submit" value="Simular" class="btn btn--success">
+      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+        <div class="col-span-full">
+          <label for="model" class="block text-sm font-medium leading-6 text-gray-900">Model</label>
+          <div class="mt-2">
+            <input type="text" name="model" id="model" autocomplete="model"
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+        <div class="col-span-full">
+          <label for="slope" class="block text-sm font-medium leading-6 text-gray-900">Pendiente</label>
+          <div class="mt-2">
+            <input type="text" name="slope" id="slope" autocomplete="slope"
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+        <div class="col-span-full">
+          <label for="start_time" class="block text-sm font-medium leading-6 text-gray-900">Tiempo inicial</label>
+          <div class="mt-2">
+            <input type="text" name="start_time" id="start_time" autocomplete="start_time"
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+        <div class="col-span-full">
+          <label for="slope" class="block text-sm font-medium leading-6 text-gray-900">Tiempo final</label>
+          <div class="mt-2">
+            <input type="text" name="end_time" id="end_time" autocomplete="end_time"
+              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <input type="submit" value="Simular" class="btn btn--success">
+      </div>
     </form>
-
   </div>
 </section>
 {% endblock %}
