@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
   mongodb:
@@ -27,7 +27,7 @@ services:
         - backend
   firesim:
     image: agusgiorlando/multifiresim-firesim:latest
-    volumes:
+    # volumes:
       # - ../firesim/src/:/src
       # - ../firesim/api/:/api
     ports:
