@@ -1,9 +1,23 @@
-firesim/firesim-env/*
-firesim/api/__pycache__/*
-firesim/api/src/__pycache__/*
+# Ignorar los archivos de entorno virtual de Python
+firesim/api/firesim-env/*
 backend/backend-env/*
-backend/src/__pycache__/*
-backend/src/simulation/__pycache__/*
 frontend/frontend-env/*
-frontend/src/__pycache__/*
+
+# Ignorar los archivos compilados de C
+firesim/src/*.o
+firesim/src/fireSim
+
+# Ignorar los archivos de caché de Python
+**/__pycache__/*
+
+# Ignorar los archivos de configuración del espacio de trabajo de VS Code
+.code-workspace
+
+# Ignorar los archivos de requisitos de Python
+**/requirements.txt
+
+# Ignorar los archivos de log
+firesim/api/src/logs.log
+
+# Ignorar los archivos en la carpeta others
 others/*
