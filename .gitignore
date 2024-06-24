@@ -9,9 +9,11 @@ firesim/api/simulations
 
 # Ignorar los archivos de caché de Python
 **/__pycache__/*
-frontend/src/__pycache__
 frontend/src/file/__pycache__
-frontend/src/simulation/__pycache__
+/frontend/src/__pycache__
+/frontend/src/simulation/__pycache__
+/backend/src/__pycache__
+/backend/src/models/__pycache__
 
 # Ignorar los archivos de configuración del espacio de trabajo de VS Code
 .code-workspace

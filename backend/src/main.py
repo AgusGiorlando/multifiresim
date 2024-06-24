@@ -111,6 +111,10 @@ async def simulate(simulation: Simulation):
         
         # Guarda la imagen
         image_filepath = saveFileImage(result_data['content'], str(res.inserted_id))
+        
+        if image_filepath is None:
+            raise HTTPException(status_code=500, detail="Failed to save image")
+        
         await collection.update_one({"_id": res.inserted_id}, {"$set": {"filepath": image_filepath}})
         
         return {'result' : str(res.inserted_id)}
