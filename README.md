@@ -21,11 +21,7 @@ Para desplegar la plataforma Multifiresim, sigue estos pasos:
    git clone https://github.com/AgusGiorlando/multifiresim.git
    cd multifiresim/mft
    ```
-2. Checkout a version estable:
-   ```bash
-   git checkout tags/mvp_v0.1
-   ```
-3. Ejecuta Docker Compose:
+2. Ejecuta Docker Compose:
     ```bash
     docker-compose up -d
     ```

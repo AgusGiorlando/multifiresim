@@ -120,7 +120,8 @@ def simulate_file(file_id):
             simulation_data = {
                 "file_id": file_id,
                 "model": request.form["model"],
-                "slope": float(request.form["slope"]),
+                "windSpd": float(request.form["windSpd"]),
+                "windDir": float(request.form["windDir"]),
                 "start_time": float(request.form["start_time"]),
                 "end_time": float(request.form["end_time"]),
             }

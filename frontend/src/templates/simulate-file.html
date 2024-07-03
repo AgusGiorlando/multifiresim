@@ -5,35 +5,33 @@
 
   <div class="border-b border-gray-900/10 pb-12">
     <form action"/simulate-file/{{file_id}}" method="POST" class="form" enctype="multipart/form-data">
-
       <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-        <div class="col-span-full">
+        <div class="col-span-full mt-2">
           <label for="model" class="block text-sm font-medium leading-6 text-gray-900">Model</label>
-          <div class="mt-2">
-            <input type="text" name="model" id="model" autocomplete="model"
-              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-          </div>
+          <input type="text" name="model" id="model" autocomplete="model"
+            class="block w-full p-1 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
-        <div class="col-span-full">
-          <label for="slope" class="block text-sm font-medium leading-6 text-gray-900">Pendiente</label>
-          <div class="mt-2">
-            <input type="text" name="slope" id="slope" autocomplete="slope"
-              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-          </div>
+        <div class="col-span-full mt-2">
+          <label for="windSpd" class="block text-sm font-medium leading-6 text-gray-900">Velocidad del viento</label>
+          <input type="text" name="windSpd" id="windSpd" autocomplete="windSpd"
+            class="block w-full p-1 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <p class="text-sm text-gray-500">Velocidad del viento en km/h</p>
         </div>
-        <div class="col-span-full">
+        <div class="col-span-full mt-2">
+          <label for="windDir" class="block text-sm font-medium leading-6 text-gray-900">Dirección del viento</label>
+          <input type="text" name="windDir" id="windDir" autocomplete="windDir"
+            class="block w-full p-1 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          <p class="text-sm text-gray-500">Grados desde el norte en sentido horario</p>
+        </div>
+        <div class="col-span-full mt-2">
           <label for="start_time" class="block text-sm font-medium leading-6 text-gray-900">Tiempo inicial</label>
-          <div class="mt-2">
-            <input type="text" name="start_time" id="start_time" autocomplete="start_time"
-              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-          </div>
+          <input type="text" name="start_time" id="start_time" autocomplete="start_time"
+            class="block w-full p-1 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
-        <div class="col-span-full">
+        <div class="col-span-full mt-2">
           <label for="slope" class="block text-sm font-medium leading-6 text-gray-900">Tiempo final</label>
-          <div class="mt-2">
-            <input type="text" name="end_time" id="end_time" autocomplete="end_time"
-              class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
-          </div>
+          <input type="text" name="end_time" id="end_time" autocomplete="end_time"
+            class="block w-full p-1 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
         </div>
       </div>
       <div class="mt-4">

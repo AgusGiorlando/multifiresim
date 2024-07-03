@@ -6,7 +6,8 @@ from bson import ObjectId
 class Simulation(BaseModel):
     result_filename: str
     model: str
-    slope: float
+    windSpd: float
+    windDir: float
     file_ign: str
     start_time: float
     end_time: float

@@ -89,7 +89,8 @@ async def simulate(simulation: Simulation):
         request = {
             "file_id" : data['file_id'],
             "model": data['model'],
-            "slope": data['slope'],
+            "windSpd": data['windSpd'],
+            "windDir": data['windDir'],
             "start_time": data['start_time'],
             "end_time": data['end_time']
         }

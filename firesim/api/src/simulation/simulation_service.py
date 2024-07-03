@@ -31,14 +31,17 @@ async def run_simulation(simulation: Simulation, file):
         logger.debug("Iniciando simulador")
         process = await asyncio.create_subprocess_exec(
             "../../src/fireSim",
+            simulation_filepath,
             result_filepath,
             simulation.model,
-            str(simulation.slope),
-            simulation_filepath,
+            str(simulation.windSpd),
+            str(simulation.windDir),
             str(simulation.start_time),
             str(simulation.end_time),
             stdout=PIPE, stderr=PIPE, cwd="../src"
         )
+
+        logger.debug(f'subprocess: {process}')
 
         # Espera a que termine la simulacion
         stdout, stderr = await process.communicate()
