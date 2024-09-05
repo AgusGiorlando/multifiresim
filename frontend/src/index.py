@@ -119,7 +119,8 @@ def simulate_file(file_id):
             # Parsea los datos del formulario y crea una instancia de la clase Simulation
             simulation_data = {
                 "file_id": file_id,
-                "model": request.form["model"],
+                # "model": request.form["model"],
+                "model": 1,
                 "windSpd": float(request.form["windSpd"]),
                 "windDir": float(request.form["windDir"]),
                 "start_time": float(request.form["start_time"]),

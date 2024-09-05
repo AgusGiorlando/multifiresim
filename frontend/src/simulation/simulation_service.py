@@ -7,9 +7,7 @@ import seaborn as sns
 import traceback
 import pandas as pd
 
-#BACKEND_URL = "http://localhost:5000/"
 BACKEND_URL = "http://backend/"
-
 
 def findFileContentById(file_id):
     backend_url = BACKEND_URL + "files/" + file_id
