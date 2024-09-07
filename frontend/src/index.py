@@ -7,9 +7,7 @@ import traceback
 
 app = Flask(__name__)
 
-# BACKEND_URL = "http://localhost:5000/"
 BACKEND_URL = "http://backend/"
-
 
 @app.route("/")
 def index():

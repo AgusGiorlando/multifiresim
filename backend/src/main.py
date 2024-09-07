@@ -18,9 +18,11 @@ MONGO_URI = "mongodb://mongodb:27017/"
 client = AsyncIOMotorClient(MONGO_URI)
 db = client["simulation_db"]
 
+FIRESIM_URL = "http://firesim/"
+
 @app.get("/")
 def index():
-    return {"message": "Backend local"}
+    return {"message": "Backend"}
 
 @app.post('/files/upload')
 async def upload_file(file: File):
@@ -96,9 +98,9 @@ async def simulate(simulation: Simulation):
         }
     
         # Llama al simulador
-        url = "http://firesim/simulate"
-        response = httpx.post(url, json=request)
-        
+        url = FIRESIM_URL + "simulate"
+        response = httpx.post(url, json=request, timeout=60.0)  # 60 segundos de timeout
+
         # Guarda la respuesta como Result
         result_data = {
             "simulation_id" : str(sim.inserted_id),
