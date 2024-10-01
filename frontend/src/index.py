@@ -4,6 +4,7 @@ from simulation.simulation_service import findFileContentById, saveFileImage, fi
 from file.file import File
 import httpx
 import traceback
+import os
 
 app = Flask(__name__)
 
@@ -140,4 +141,4 @@ def simulate_file(file_id):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8080, debug=True)
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug=True)
