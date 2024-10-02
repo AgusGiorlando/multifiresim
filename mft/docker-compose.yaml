@@ -19,7 +19,7 @@ services:
   frontend:
     image: agusgiorlando/multifiresim-frontend:latest
     ports:
-      - "8000:5000"
+      - "8000:8080"
     volumes:
       # - ../frontend/src/:/app
       - multifiresim_images:/app/images
