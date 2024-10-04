@@ -5,20 +5,16 @@ on:
   push:
     branches: [ "master" ]
 
-jobs:
-  login: 
+jobs:  
+  frontend:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-  
-  frontend:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
       - name: Build the Docker image
         working-directory: frontend
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/multifiresim-frontend:actions-${{github.sha}} -f Dockerfile .
@@ -29,6 +25,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build the Docker image
         working-directory: backend
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/multifiresim-backend:actions-${{github.sha}} -f Dockerfile .
@@ -39,6 +40,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: Build the Docker image
         working-directory: firesim
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/multifiresim-firesim:actions-${{github.sha}} -f Dockerfile .
