@@ -18,6 +18,8 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: cd frontend
         run: cd frontend
+      - name: ls -la
+        run: ls -la
       - name: Build the Docker image
         run: docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/multifiresim-frontend:actions-${{github.sha}} -f Dockerfile .
       - name: Push the Docker image
