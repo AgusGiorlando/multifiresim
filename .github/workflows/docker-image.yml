@@ -3,8 +3,6 @@ name: Docker Image CI
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
 jobs:
   saludo:
@@ -12,3 +10,7 @@ jobs:
     steps:
       - name: 'Hello World'
         run: echo "Hello World"
+      - name: Fecha actual
+        run: date
+      - name: Contenido de la carpeta
+        run: ls -la
